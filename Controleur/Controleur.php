@@ -3,7 +3,7 @@
 /**
  * Classe abstraite Controleur
  *
- * @author Baptiste
+ * @author Pierre-Jean SEROL
  */
 abstract class Controleur
 {

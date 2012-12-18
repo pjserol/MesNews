@@ -1,5 +1,8 @@
 <?php  // partie Modèle du blog
 
+/*
+ * Connexion à la base de donnée
+ */
 function getBDD()
 {
     $bdd = new PDO('mysql:host=localhost;dbname=mesnews', 'root', '');
@@ -8,6 +11,9 @@ function getBDD()
     return $bdd;
 }
 
+/*
+ * Fonction qui retourne la liste des news
+ */
 function getNews()
 {
     $bdd = getBDD();
@@ -15,6 +21,10 @@ function getNews()
     return $news;
 }
 
+/*
+ * Fonction qui retourne les informations concernant une news
+ * 1 Paramètre : identifiant de la news
+ */
 function getNew($id)
 {
     $bdd = getBDD();

@@ -3,10 +3,10 @@
 require 'Modele/modele.php';
 
 try {
+    // On appel la fonction getNews pour stocker la liste des news
     $news = getNews();
-    //$lienNews = "newsAccueil.php?id=";  // utilisé pour créer le lien vers un billet
     require 'Vue/listeNews.php';
-}
+} // Dans le cas, où la fonction retourne une erreur, on affiche le message d'erreur
 catch (Exception $e) {
     $msgErreur = $e->getMessage();
     require 'Vue/erreur.php';
